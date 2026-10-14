@@ -83,6 +83,8 @@ ament_auto_add_library(${PROJECT_NAME} SHARED
   src/call_back/livox_lidar_callback.cpp
 )
 
+rosidl_target_interfaces(${PROJECT_NAME} ${LIVOX_INTERFACES} "rosidl_typesupport_cpp")
+
 # include file direcotry
 target_include_directories(${PROJECT_NAME} PUBLIC
   ${PCL_INCLUDE_DIRS}
